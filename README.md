@@ -24,6 +24,9 @@ sudo systemctl restart NetworkManager.service
 sudo systemctl disable systemd-networkd
 ````
 
+# Detection
+To aid detection of this specific poc we have released a sigma rule. It should be noted that this sigma rule is specific to our poc code and may not detect all possible exloit attempts.
+
 # License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

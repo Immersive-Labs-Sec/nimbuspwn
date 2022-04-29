@@ -1,0 +1,29 @@
+title: Nimbuspwn file creation
+id: 2575b186-36ef-486f-bc0c-5a85d3cfa513
+status: experimental
+description: Detects file creation related to nimbuspwn poc
+author: Kev Breen Immersive Labs
+date: 2022/04/29
+logsource:
+    category: file_event
+    product: windows
+detection:
+    file_create:
+        EventCode: 11
+    selection:
+        TargetFilename|endswith:
+            - '/arp'
+            - '/route'
+            - '/init'
+            - '/usermod'
+            - '/visudo'
+            - '/wpa_supplicant'
+    tmpdir:
+        TargetFilename|startswith:
+            - '/tmp/'
+    condition: file_create and tmpdir and selection
+fields:
+    - Image
+falsepositives:
+    - Unknown at this time.
+level: high
