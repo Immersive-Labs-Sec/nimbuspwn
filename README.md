@@ -25,7 +25,7 @@ sudo systemctl disable systemd-networkd
 ````
 
 # Detection
-To aid detection of this specific poc we have released a sigma rule. It should be noted that this sigma rule is specific to our poc code and may not detect all possible exloit attempts.
+To aid detection of this specific poc we have released a sigma rule. It should be noted that this sigma rule is specific to our poc code and may not detect all possible exploit attempts.
 
 # License
 
